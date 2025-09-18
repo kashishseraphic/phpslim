@@ -194,6 +194,7 @@ LOG_LEVEL=INFO
 ├── .env                   # Environment configuration
 ├── composer.json          # Dependencies
 └── php-di-config.php      # Dependency injection config
+├── start.sh               # shell script (for quick setup)
 ```
 
 ## Troubleshooting
