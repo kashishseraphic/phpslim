@@ -27,6 +27,9 @@ A RESTful API for managing books and borrowing records using PHP Slim Framework 
 - Enter Your DB Name        (Ex: SlimApp)
 - Enter Your User           (Ex: root)
 - Enter Your User Password  (Ex: password)
+- it will create new database and also generate .env
+- further it will promt for migration say (y/Y) (Mandatory).
+- further it will promt for seeders say (y/Y) (Mandatory).
 ### for manual setup follow the below steps
 
 ### 1. Install Dependencies
