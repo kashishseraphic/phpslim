@@ -11,15 +11,15 @@ class UserSeeder
         $users = [
             [
                 'username' => 'alice',
-                'passwordHash' => password_hash('alice123', PASSWORD_BCRYPT),
+                'passwordHash' => password_hash('password', PASSWORD_BCRYPT),
             ],
             [
                 'username' => 'bob',
-                'passwordHash' => password_hash('bob123', PASSWORD_BCRYPT),
+                'passwordHash' => password_hash('password', PASSWORD_BCRYPT),
             ],
             [
                 'username' => 'charlie',
-                'passwordHash' => password_hash('charlie123', PASSWORD_BCRYPT),
+                'passwordHash' => password_hash('password', PASSWORD_BCRYPT),
             ],
         ];
 
