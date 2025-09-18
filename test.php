@@ -7,7 +7,7 @@
 
 $baseUrl = 'http://localhost:8000';
 
-echo "🚀 Testing Book API\n";
+echo "Testing Book API\n";
 echo "==================\n\n";
 
 // Test 1: Get OAuth2 Token
@@ -34,10 +34,10 @@ curl_close($ch);
 if ($httpCode === 200) {
     $tokenResponse = json_decode($response, true);
     $accessToken = $tokenResponse['access_token'] ?? null;
-    echo "✅ Token obtained successfully\n";
+    echo "Token obtained successfully\n";
     echo "Access Token: " . substr($accessToken, 0, 20) . "...\n\n";
 } else {
-    echo "❌ Failed to get token. HTTP Code: $httpCode\n";
+    echo "Failed to get token. HTTP Code: $httpCode\n";
     echo "Response: $response\n\n";
     exit(1);
 }
@@ -67,10 +67,10 @@ curl_close($ch);
 if ($httpCode === 201) {
     $bookResponse = json_decode($response, true);
     $bookId = $bookResponse["data"]['bookId'] ?? null;
-    echo "✅ Book created successfully\n";
+    echo "Book created successfully\n";
     echo "Book ID: $bookId\n\n";
 } else {
-    echo "❌ Failed to create book. HTTP Code: $httpCode\n";
+    echo "Failed to create book. HTTP Code: $httpCode\n";
     echo "Response: $response\n\n";
 }
 
@@ -89,10 +89,10 @@ curl_close($ch);
 
 if ($httpCode === 200) {
     $books = json_decode($response, true);
-    echo "✅ Books retrieved successfully\n";
-    echo "Number of books: " . count($books[['data']]) . "\n\n";
+    echo "Books retrieved successfully\n";
+    echo "Number of books: " . count($books['data']) . "\n\n";
 } else {
-    echo "❌ Failed to get books. HTTP Code: $httpCode\n";
+    echo "Failed to get books. HTTP Code: $httpCode\n";
     echo "Response: $response\n\n";
 }
 
@@ -116,9 +116,9 @@ if (isset($bookId)) {
     curl_close($ch);
 
     if ($httpCode === 201) {
-        echo "✅ Book borrowed successfully\n\n";
+        echo "Book borrowed successfully\n\n";
     } else {
-        echo "❌ Failed to borrow book. HTTP Code: $httpCode\n";
+        echo " Failed to borrow book. HTTP Code: $httpCode\n";
         echo "Response: $response\n\n";
     }
 }
@@ -139,10 +139,10 @@ if (isset($bookId)) {
 
     if ($httpCode === 200) {
         $borrows = json_decode($response, true);
-        echo "✅ Borrows retrieved successfully\n";
+        echo " Borrows retrieved successfully\n";
         echo "Number of borrows: " . count($borrows['data']) . "\n\n";
     } else {
-        echo "❌ Failed to get borrows. HTTP Code: $httpCode\n";
+        echo " Failed to get borrows. HTTP Code: $httpCode\n";
         echo "Response: $response\n\n";
     }
 }
@@ -161,10 +161,10 @@ $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
 if ($httpCode === 200) {
-    echo "✅ Latest borrow per book analytics retrieved successfully\n";
+    echo " Latest borrow per book analytics retrieved successfully\n";
     echo "Response: $response\n\n";
 } else {
-    echo "❌ Failed to get latest borrow per book analytics. HTTP Code: $httpCode\n";
+    echo " Failed to get latest borrow per book analytics. HTTP Code: $httpCode\n";
     echo "Response: $response\n\n";
 }
 
@@ -182,10 +182,10 @@ $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
 if ($httpCode === 200) {
-    echo "✅ Book summary analytics retrieved successfully\n";
+    echo " Book summary analytics retrieved successfully\n";
     echo "Response: $response\n\n";
 } else {
-    echo "❌ Failed to get book summary analytics. HTTP Code: $httpCode\n";
+    echo " Failed to get book summary analytics. HTTP Code: $httpCode\n";
     echo "Response: $response\n\n";
 }
 
@@ -203,11 +203,11 @@ $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
 if ($httpCode === 200) {
-    echo "✅ Borrow rank per user analytics retrieved successfully\n";
+    echo " Borrow rank per user analytics retrieved successfully\n";
     echo "Response: $response\n\n";
 } else {
-    echo "❌ Failed to get borrow rank per user analytics. HTTP Code: $httpCode\n";
+    echo " Failed to get borrow rank per user analytics. HTTP Code: $httpCode\n";
     echo "Response: $response\n\n";
 }
 
-echo "🎉 API Testing Complete!\n";
+echo "API Testing Complete!\n";
