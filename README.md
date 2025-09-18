@@ -20,15 +20,17 @@ A RESTful API for managing books and borrowing records using PHP Slim Framework 
 - Monolog for logging
 
 ## Quick Start
+- simply open your terminal and 
+- run (./start.sh) further setup will be automatically done.
+### for manual setup follow the below steps
 
 ### 1. Install Dependencies
 
 ```bash
 composer install
 ```
-
+- if you get any error on composer install please make sure to remove composer.lock file
 ### 2. Database Setup
-
 ```bash
 # Create database
 mysql -u root -p -e "CREATE DATABASE bookdb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
@@ -60,7 +62,7 @@ php test.php
 - `POST /oauth/token` - Get OAuth2 access token
 
 ### SignUp
-- `POST //signup` - Register Users
+- `POST /signup` - Register Users
 
 ### Books
 
@@ -83,7 +85,7 @@ php test.php
 ```bash
 curl -X POST http://localhost:8000/oauth/token \
   -H "Content-Type: application/x-www-form-urlencoded" \
-  -d "grant_type=password&client_id=test-client&client_secret=password&username=testuser&password=password"
+  -d "grant_type=password&client_id=test-client&client_secret=password&username=alice&password=password"
 ```
 
 2. **Create a Book:**
@@ -107,7 +109,7 @@ curl -X GET http://localhost:8000/books \
 Run the test script:
 
 ```bash
-php test-api.php
+php test.php
 ```
 
 ## Configuration
@@ -134,7 +136,7 @@ LOG_LEVEL=INFO
 
 ### Test User Credentials
 
-- Username: `testuser`
+- Username: `alice`
 - Password: `password`
 
 ## Project Structure

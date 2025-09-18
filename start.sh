@@ -40,6 +40,11 @@ DB_CHARSET=utf8mb4
 
 OAUTH_PRIVATE_KEY_PATH=oauth-private.key
 OAUTH_ENCRYPTION_KEY=lxZFUEsBCJ2Yb14IF2ygAHI5N4+ZAUXXaSeeJm6+twsUmIen
+
+
+ACCESS_TOKEN_TTL=3600       # 1 hour in seconds
+REFRESH_TOKEN_TTL=1209600   # 14 days in seconds
+
 EOL
 
 echo ".env file created successfully."
@@ -93,3 +98,5 @@ echo "\nDump Autoload Now"
 composer dump-autoload
 echo "\n\nSetup completed successfully!\n"
 
+echo "------Let's Start Server----\n"
+php -S localhost:8000 -t public
