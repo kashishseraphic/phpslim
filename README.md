@@ -32,7 +32,9 @@ A RESTful API for managing books and borrowing records using PHP Slim Framework 
 - further it will promt for seeders say (y/Y) (Mandatory).
 ### for manual setup follow the below steps
 
-### 1. Install Dependencies
+## Configuration
+
+### Environment Variables (.env)
 
 ```bash
 create .env file in your project at root directory
@@ -57,6 +59,9 @@ ACCESS_TOKEN_TTL=3600       # 1 hour in seconds
 REFRESH_TOKEN_TTL=1209600   # 14 days in seconds
 
 ```
+
+### 1. Install Dependencies
+
 
 ```bash
 composer install
@@ -150,22 +155,6 @@ Run the test script:
 php test.php
 ```
 
-## Configuration
-
-### Environment Variables (.env)
-
-```env
-DB_HOST=127.0.0.1
-DB_NAME=bookdb
-DB_USER=root
-DB_PASS=your_password
-
-OAUTH_PRIVATE_KEY_PATH=oauth-private.key
-OAUTH_ENCRYPTION_KEY=your_encryption_key
-
-APP_ENV=development
-LOG_LEVEL=INFO
-```
 
 ### Default OAuth2 Client
 

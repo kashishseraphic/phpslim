@@ -1,3 +1,4 @@
-.env
 /vendor/
 *.lock
+config.bat
+node_modules
