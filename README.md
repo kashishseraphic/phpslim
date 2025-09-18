@@ -35,9 +35,39 @@ A RESTful API for managing books and borrowing records using PHP Slim Framework 
 ### 1. Install Dependencies
 
 ```bash
+create .env file in your project at root directory
+and copy following content and past it to .env file
+
+APP_NAME="SlimApp"
+APP_ENV="development"
+APP_DEBUG=true
+
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_NAME=Your DB Name
+DB_USER=Your DB User
+DB_PASS=Your DB Password
+DB_CHARSET=utf8mb4
+
+OAUTH_PRIVATE_KEY_PATH=oauth-private.key
+OAUTH_ENCRYPTION_KEY=lxZFUEsBCJ2Yb14IF2ygAHI5N4+ZAUXXaSeeJm6+twsUmIen
+
+
+ACCESS_TOKEN_TTL=3600       # 1 hour in seconds
+REFRESH_TOKEN_TTL=1209600   # 14 days in seconds
+
+```
+
+```bash
 composer install
 ```
 - if you get any error on composer install please make sure to remove composer.lock file
+or use
+# Optional
+```bash
+composer update
+```
+
 ### 2. Database Setup
 ```bash
 # Create database
