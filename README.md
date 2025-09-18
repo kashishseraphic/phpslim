@@ -50,7 +50,7 @@ php -S localhost:8000 -t public
 ### 4. Test the API
 
 ```bash
-php test-api.php
+php test.php
 ```
 
 ## API Endpoints
