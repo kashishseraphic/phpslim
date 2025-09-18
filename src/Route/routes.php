@@ -2,7 +2,6 @@
 use Slim\App;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use Psr\Log\LoggerInterface;
 use App\Controllers\HomeController;
 use App\Controllers\AuthController;
 use App\Controllers\UserController;
@@ -16,13 +15,6 @@ use App\Controllers\AnalyticsController;
  * @param Psr\Container\ContainerInterface $container
  */
 return function (App $app, $container) {
-
-// // Add Middleware (order matters - last added runs first)
-// $app->addErrorMiddleware(true, true, true);
-// $app->add(RequestLoggingMiddleware::class);
-// $app->addBodyParsingMiddleware();
-// $app->addRoutingMiddleware();
-
 
 
 $app->get('/', HomeController::class . ':index');
