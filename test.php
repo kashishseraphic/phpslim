@@ -16,7 +16,7 @@ $tokenData = [
     'grant_type' => 'password',
     'client_id' => 'test-client',
     'client_secret' => 'password',
-    'username' => 'testuser',
+    'username' => 'alice',
     'password' => 'password'
 ];
 
