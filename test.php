@@ -66,7 +66,7 @@ curl_close($ch);
 
 if ($httpCode === 201) {
     $bookResponse = json_decode($response, true);
-    $bookId = $bookResponse['bookId'] ?? null;
+    $bookId = $bookResponse["data"]['bookId'] ?? null;
     echo "✅ Book created successfully\n";
     echo "Book ID: $bookId\n\n";
 } else {
@@ -90,7 +90,7 @@ curl_close($ch);
 if ($httpCode === 200) {
     $books = json_decode($response, true);
     echo "✅ Books retrieved successfully\n";
-    echo "Number of books: " . count($books) . "\n\n";
+    echo "Number of books: " . count($books[['data']]) . "\n\n";
 } else {
     echo "❌ Failed to get books. HTTP Code: $httpCode\n";
     echo "Response: $response\n\n";
@@ -140,7 +140,7 @@ if (isset($bookId)) {
     if ($httpCode === 200) {
         $borrows = json_decode($response, true);
         echo "✅ Borrows retrieved successfully\n";
-        echo "Number of borrows: " . count($borrows) . "\n\n";
+        echo "Number of borrows: " . count($borrows['data']) . "\n\n";
     } else {
         echo "❌ Failed to get borrows. HTTP Code: $httpCode\n";
         echo "Response: $response\n\n";
