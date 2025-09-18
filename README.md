@@ -20,8 +20,13 @@ A RESTful API for managing books and borrowing records using PHP Slim Framework 
 - Monolog for logging
 
 ## Quick Start
-- simply open your terminal and 
-- run (./start.sh) further setup will be automatically done.
+## Install With Shell Script
+```bash
+./start.sh
+```
+- Enter Your DB Name        (Ex: SlimApp)
+- Enter Your User           (Ex: root)
+- Enter Your User Password  (Ex: password)
 ### for manual setup follow the below steps
 
 ### 1. Install Dependencies
